@@ -13,6 +13,13 @@ bin-release/
 *.ipa
 *.apk
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`# This code generates Fibonacci sequence up to a specified number
+
+def fibonacci(n):
+    fib_sequence = [0, 1]
+    while fib_sequence[-1] + fib_sequence[-2] <= n:
+        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])
+    return fib_sequence
+
+number = int(input("Enter the number to generate Fibonacci sequence up to: "))
+print("Fibonacci sequence up to", number, ":", fibonacci(number))
